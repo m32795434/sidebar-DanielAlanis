@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root {
+    --sidebar-color: #00A9E0;
+    --sidebar-text-color: white;
+    --login-body-bg: #f4decb;
+    --login-form-bg: #00A9E0;
+}
+/* Sidebar */
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 200px;
+    height: 100vh;
+    background-color: var(--sidebar-color);
+    left: -200px;
+    transition: all 500ms linear;
+  
+  }
+  
+  #sidebar.active {
+    left: 0;
+  
+  }
+  
+  #sidebar ul li {
+    color: var(--sidebar-text-color);
+    text-align: center;
+    padding: 15px;
+    list-style: none;
+    border-bottom: 1px solid rgba(100, 100, 100, .3);
+    font-weight: bold;
+  }
+  
+  #sidebar ul li .sidebar-link {
+    display: block;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    
+  }
+  
+  #sidebar ul li .sidebar-link:hover {
+    transform: scale(1.2);
+    
+  }
+  
+  .logo {
+    height: 40px;
+    width: 100px;
+    align-self: center;
+    
+  }
+  
+  #sidebar ul li:nth-child(1) {
+    border-bottom: none;
+  }
+  
+  #sidebar ul li:nth-child(2) {
+    padding-bottom: 30px;
+    border-top: none;
+  }
+  
+  #sidebar .toggle-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 230px;
+    top: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+  
+  }
+  
+  .user-name {
+    padding: 3px 0 15px 0;
+    font-size: 22px;
+  }
+  
+  .close-session {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    height: 25px;
+    width: 100px;
+    border-radius: 5%;
+    color: white;
+  }
+  
+  .close-session:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+    transform: scale(1.1)
+  }
+  
+  .menu-button {
+    width: 50px;
+    height: 6px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+  
+  }
+  
+  .menu-button::before,
+  .menu-button::after {
+    position: absolute;
+    content: '';
+    width: 50px;
+    height: 6px;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+  
+  }
+  
+  .menu-button::before {
+    transform: translateY(-16px);
+  }
+  
+  .menu-button::after {
+    transform: translateY(16px);
+  }
+  
+  #sidebar .support-mail{
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--sidebar-text-color);
+    align-self: center;
+    padding-top: 50px;
+  
+  }
