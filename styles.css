@@ -139,3 +139,21 @@
     padding-top: 50px;
   
   }
+
+  /* Animations */
+
+.toggle-btn.open .menu-button {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.toggle-btn.open .menu-button::before {
+  transform: rotate(45deg) translate(35px, -35px);
+
+}
+
+.toggle-btn.open .menu-button::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+  
+}
